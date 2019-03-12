@@ -16,6 +16,7 @@ conn.execute("""
 trans = conn.begin()
 try:
     conn.execute("INSERT INTO Addresses (Street, Number, Coordinate, EmployeeID) VALUES ('Trg', 2, '', 1)")
+    conn.execute("INSERT INTO Addresses (Street, Number, Coordinate, EmployeeID) VALUES ('Ulica', 11, '', 2)")
     trans.commit()
 except:
     trans.rollback()
