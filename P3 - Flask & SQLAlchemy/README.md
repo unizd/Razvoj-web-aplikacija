@@ -1,0 +1,1 @@
+U ovom predavanju nastavljamo sa sqlalchemy-jem, i koristimo ga u flask view funkcijama, te se upoznajemo s migracijama, tj. alembic frameworkom i flask-migrate ekstenzijom.
