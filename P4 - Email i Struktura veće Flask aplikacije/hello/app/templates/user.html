@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Korisnik | {{ user.username }}{% endblock %}
+{% block page_content %}
+<div class="page-header">
+    <h1>Korisnik: <b>{{ user.username }}</b></h1>
+</div>
+<div>
+    <ul>
+        <li>ID: {{user.id}}</li>        
+    </ul>
+    <a class="btn btn-danger" href="{{ url_for('main.userdelete', id=user.id ) }}" role="button">Briši</a>
+</div>
+{% endblock %}
