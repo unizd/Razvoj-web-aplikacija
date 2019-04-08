@@ -5,16 +5,16 @@
 {% block page_content %}
 <div class="page-header">
     <h1>
-        Hello, {{ current_user.username }}!
+        Pozdrav, {{ current_user.username }}!
     </h1>
-    <h3>You have not confirmed your account yet.</h3>
+    <h3>Još niste potvrdili svoj račun.</h3>
     <p>
-        Before you can access this site you need to confirm your account.
-        Check your inbox, you should have received an email with a confirmation link.
+        Prije nego možete pristupiti ovoj stranici potrebno je potvrditi račun.
+        Provjerite svoj email.
     </p>
     <p>
-        Need another confirmation email?
-        <a href="{{ url_for('auth.resend_confirmation') }}">Click here</a>
+        Želite novi aktivacijski email ?
+        <a href="{{ url_for('auth.resend_confirmation') }}">Kliknite ovdje</a>
     </p>
 </div>
 {% endblock %}
