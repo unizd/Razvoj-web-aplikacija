@@ -26,7 +26,7 @@
 				{% if current_user.is_administrator() %}
 				<li><a href="{{ url_for('main.korisnici') }}">Korisnici</a></li>
 				{% elif current_user.is_novinar() %}
-				<li><a href="{{ url_for('main.index') }}">Dodaj vijest</a></li>
+				<li><a href="{{ url_for('main.dodaj_vijest') }}">Dodaj vijest</a></li>
 				{% endif %}
             </ul>
             <ul class="nav navbar-nav navbar-right">
