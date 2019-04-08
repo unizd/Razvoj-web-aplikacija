@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}eNovine - Prijava{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Prijava</h1>
+</div>
+<div class="col-md-4">
+    {{ wtf.quick_form(form) }}
+    <br>
+    <p>Zaboravljena lozinka ? <a href="{{ url_for('auth.password_reset_request') }}">Zatraži novu</a>.</p>
+    <p>Želiš postati novinar ? <a href="{{ url_for('auth.register') }}">Registriraj se</a>.</p>
+</div>
+{% endblock %}

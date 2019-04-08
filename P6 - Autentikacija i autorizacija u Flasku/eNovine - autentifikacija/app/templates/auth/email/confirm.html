@@ -1,0 +1,8 @@
+<p>Dragi/a {{ user.username }},</p>
+<p>Dobrodošli u <b>eNovine</b>!</p>
+<p>Da biste potvrdili račun <a href="{{ url_for('auth.confirm', token=token, _external=True) }}">kliknite ovdje</a>.</p>
+<p>Također, možete kopirati sljedeći URL u adresnu traku:</p>
+<p>{{ url_for('auth.confirm', token=token, _external=True) }}</p>
+<p>Srdačno,</p>
+<p>Vaše eNovine</p>
+<p><small>Napomena: Ovo je automatski generiran email na koji nemojte odgovarati.</small></p>
