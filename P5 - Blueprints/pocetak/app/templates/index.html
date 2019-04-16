@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}RWA - Blueprints{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Pozdrav {% if name %}{{ name }}{% else %}stranče{% endif %}!</h1>
+    {% if not known %}
+    <p>Drago mi je da smo se upoznali!</p>
+    {% else %}
+    <p>Drago mi je da ste se vratili!</p>
+    {% endif %}
+</div>
+{{ wtf.quick_form(form) }}
+{% endblock %}
