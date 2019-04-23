@@ -1,0 +1,48 @@
+{% extends "./base.html" %}
+
+{% block title %}Registar nekretnina{% endblock %}
+
+{% block content %}
+    <div class="row page-header">
+
+        <div class="col-md-6">
+            <h2 class="text-muted"><i class="fa fa-2x fa fa-building-o"></i> Pregled nekretnina</h2>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <table id="no-more-tables" class="table table-bordered table-hover">
+                <thead>
+                    <tr class="sivo">
+                        <th class="text-center">Ime</th>
+                        <th class="text-center">Šifra</th>
+                        <th class="text-center">Ukupna površina</th>
+                        <th class="text-center">Godina izgradnje</th>
+                        <th class="text-center">Adresa</th>
+                        <th class="text-center">Poštanski broj</th>
+                        <th class="text-center">Ostalo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for nekretnina in nekretnine %}
+                        <tr>
+                            <td data-title="Ime" class="text-center">{{ nekretnina.ime }}</td>
+                            <td data-title="Šifra" class="text-center">{{ nekretnina.sifra }}</td>
+                            <td data-title="Ukupna površina" class="text-center">{{ nekretnina.ukupna_povrsina }}</td>
+                            <td data-title="Godina izgradnje" class="text-center">{{ nekretnina.godina_izgradnje_objekta }}</td>
+                            <td data-title="Adresa" class="text-center">{{ nekretnina.adresa }}</td>
+                            <td data-title="Poštanski broj" class="text-center">{{ nekretnina.post_broj }}</td>
+                            <td data-title="Ostalo" class="text-center">{{ nekretnina.ostalo }}</td>
+                        </tr> 
+                    {% empty %}
+                        <tr>
+                              <td colspan="33" class="text-center">Trenutno ne postoje podaci u registru</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

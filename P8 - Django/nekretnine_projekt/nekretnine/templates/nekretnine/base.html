@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <meta name="description" content="{% block description %}{% endblock %}">
+    <meta name="author" content="">
+
+    <link href="{% static "nekretnine/css/bootstrap.css" %}" rel="stylesheet">
+    <link href="{% static "nekretnine/css/font-awesome.min.css" %}" rel="stylesheet">
+
+    <link href="{% static "nekretnine/css/style.css" %}" rel="stylesheet">
+</head>
+<body>
+
+	<nav class="navbar navbar-blue navbar-fixed-top txt_white">
+		<div id="navbar" class="collapse navbar-collapse margin-top10 header_background">
+			<ul class="nav navbar-nav navbar-right margin-top50 margin-right50 txt_white">
+				<h4 class="txt_white">Upravljanje nekretninama</h4>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="main container-fluid drzac_sadrzaja">
+		<div class="row">
+			<div class="col-md-12 margin-top130">
+				{% block content %}{% endblock %}
+			</div>
+		</div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="{% static "nekretnine/js/bootstrap.min.js" %}"></script>
+    <script src="{% static "nekretnine/js/script.js" %}"></script>
+</body>
+</html>
