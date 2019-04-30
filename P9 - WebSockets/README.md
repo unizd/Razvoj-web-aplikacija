@@ -1,0 +1,2 @@
+## WebSockets, SocketIO i Flask-SocketIO
+Od današnjih web aplikacija očekujemo da nam isporučuju informacije bez dodatnog osvježavanja web stranice.  Tu tzv. real-time funkcionalnost mora nam omogućiti poslužitelj na način da dostavlja informacije klijentima čim se pojave, u stvarnom vremenu. Kako to postići pokazat ćemo u ovom predavanju o WebSockets, SocketIO i Flask-SocketIO, kroz radionicu izrade "chat" web aplikacije.
