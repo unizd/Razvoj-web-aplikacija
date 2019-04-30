@@ -1,6 +1,6 @@
 (function() {
     var socket = io();
-    // var socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port + namespace);
+    // var socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port );
     // var form = document.querySelector("form");
     // form.addEventListener("submit", e => {
     //   e.preventDefault(); // prevents page reloading
