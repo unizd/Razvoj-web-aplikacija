@@ -1,0 +1,15 @@
+<hr>
+<h1>Portfelj</h1>
+<hr>
+<table style="width:100%">
+  <tr>
+    <th>ID</th>
+    <th>Title</th> 
+    <th>Description</th>
+  </tr>
+  <tr *ngFor="let portfolio_item of portfolio">
+    <td>{{ portfolio_item.id }}</td>
+    <td>{{ portfolio_item.title }}</td>
+    <td>{{ portfolio_item.description }}</td>
+  </tr>
+</table>
